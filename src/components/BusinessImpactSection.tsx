@@ -67,10 +67,10 @@ export function BusinessImpactSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.18 }}
-              className="mt-5 flex gap-2.5"
+              className="mt-5 flex min-w-0 flex-col gap-2.5 sm:flex-row"
             >
               {/* Hero: ฿9.3M */}
-              <div className="flex-[1.6] rounded-md border border-voyager-purple/40 bg-voyager-ink/70 px-5 py-4 shadow-[0_0_32px_rgba(169,143,255,0.12)] backdrop-blur-sm">
+              <div className="min-w-0 flex-[1.6] rounded-md border border-voyager-purple/40 bg-voyager-ink/70 px-5 py-4 shadow-[0_0_32px_rgba(169,143,255,0.12)] backdrop-blur-sm">
                 <div className="flex items-start gap-3">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-voyager-cyan/30 bg-voyager-cyan/10 text-voyager-cyan">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -87,7 +87,7 @@ export function BusinessImpactSection() {
                 </div>
               </div>
               {/* Secondary metrics stacked */}
-              <div className="flex flex-1 flex-col gap-2.5">
+              <div className="grid min-w-0 flex-1 grid-cols-1 gap-2.5 sm:flex sm:flex-col">
                 {[
                   { val: "฿9,388", label: "มูลค่าเฉลี่ยต่อคำสั่งซื้อ", icon: (
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -101,11 +101,11 @@ export function BusinessImpactSection() {
                     </svg>
                   )},
                 ].map((m) => (
-                  <div key={m.val} className="flex flex-1 items-center gap-3 rounded-md border border-voyager-mist/10 bg-voyager-ink/55 px-4 py-3 backdrop-blur-sm">
+                  <div key={m.val} className="flex min-w-0 flex-1 items-center gap-3 rounded-md border border-voyager-mist/10 bg-voyager-ink/55 px-4 py-3 backdrop-blur-sm">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-voyager-cyan/25 bg-voyager-cyan/8 text-voyager-cyan">
                       {m.icon}
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-[10px] text-voyager-mist/42">{m.label}</p>
                       <p className="mt-0.5 text-lg font-semibold text-voyager-purple/72">{m.val}</p>
                     </div>
@@ -146,13 +146,13 @@ export function BusinessImpactSection() {
           {/* ── Right ── */}
           <div className="space-y-2.5">
             {/* 3 stat cards — horizontal row */}
-            <div className="flex gap-2.5">
+            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
             {stats.map((s, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.65, delay: 0.16 + i * 0.1 }}
-                className={`relative flex-1 overflow-hidden rounded-lg backdrop-blur-sm ${s.accent ? "border border-voyager-purple/20 bg-voyager-ink/65" : "border border-voyager-mist/8 bg-voyager-ink/45"}`}
+                className={`relative min-w-0 overflow-hidden rounded-lg backdrop-blur-sm ${s.accent ? "border border-voyager-purple/20 bg-voyager-ink/65" : "border border-voyager-mist/8 bg-voyager-ink/45"}`}
               >
                 {/* Ambient glow top-right */}
                 {s.accent && (

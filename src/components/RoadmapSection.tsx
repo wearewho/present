@@ -95,11 +95,11 @@ export function RoadmapSection() {
         <motion.div
           initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex items-stretch gap-0"
+          className="flex flex-col items-stretch gap-3 md:flex-row md:gap-0"
         >
           {phases.map((p, i) => (
-            <div key={i} className="flex flex-1 items-stretch">
-              <div className={`relative flex-1 rounded-2xl border p-5 backdrop-blur-md ${
+            <div key={i} className="flex min-w-0 flex-1 flex-col items-stretch md:flex-row">
+              <div className={`relative min-w-0 flex-1 rounded-2xl border p-5 backdrop-blur-md ${
                 p.active
                   ? "border-voyager-cyan/55 bg-voyager-cyan/8 shadow-[0_0_0_1px_rgba(93,202,165,0.2),0_0_40px_rgba(93,202,165,0.12)]"
                   : p.next
@@ -172,7 +172,7 @@ export function RoadmapSection() {
 
               {/* Arrow connector */}
               {i < 2 && (
-                <div className="flex items-center px-2 shrink-0">
+                <div className="hidden shrink-0 items-center px-2 md:flex">
                   <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
                     <path
                       d="M1 8h18M15 3l6 5-6 5"
