@@ -103,7 +103,7 @@ export function WhatVoyagerSection() {
           <motion.h2
             initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.85, delay: 0.06, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-3 text-[clamp(1.8rem,3vw,3.6rem)] font-semibold leading-[1.2] text-voyager-mist"
+            className="mt-3 text-[clamp(1.6rem,2.4vw,2.8rem)] font-semibold leading-[1.2] text-voyager-mist"
           >
             เปลี่ยนจาก{" "}
             <span className="text-voyager-mist/50">"เกิดอะไรขึ้น"</span>
