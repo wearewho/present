@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hallmark · pre-emit critique: P4 H5 E4 S4 R4 V5 */
+:root {
+  --color-ink: #070816;
+  --color-navy: #0b1026;
+  --color-plum: #1d123d;
+  --color-cyan: #5dcaa5;
+  --color-purple: #a98fff;
+  --color-mist: #d8e3ff;
+}
+
+html,
+body {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 0;
+  background: var(--color-ink);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--color-mist);
+  font-family: "IBM Plex Sans Thai", system-ui, sans-serif;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(93, 202, 165, 0.28);
+}
+
+.space-grid {
+  background-image:
+    linear-gradient(rgba(216, 227, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(216, 227, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 82%);
+}
+
+.star-field {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(216, 227, 255, 0.7) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 82% 24%, rgba(93, 202, 165, 0.65) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 64% 72%, rgba(169, 143, 255, 0.65) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 24% 78%, rgba(216, 227, 255, 0.45) 0 1px, transparent 1.4px);
+  background-size: 360px 360px, 420px 420px, 520px 520px, 460px 460px;
+}
+
+.noise {
+  background-image: radial-gradient(rgba(216, 227, 255, 0.08) 0.6px, transparent 0.6px);
+  background-size: 4px 4px;
+}
+
+.hero-stars {
+  background-image:
+    radial-gradient(circle at 18% 16%, rgba(216, 227, 255, 0.72) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 58% 18%, rgba(216, 227, 255, 0.56) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 82% 32%, rgba(93, 202, 165, 0.58) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 68% 78%, rgba(169, 143, 255, 0.58) 0 1px, transparent 1.4px);
+  background-size: 440px 440px, 520px 520px, 620px 620px, 560px 560px;
+}
+
+.mission-route::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-bottom: 2px solid rgba(93, 202, 165, 0.46);
+  border-right: 2px solid rgba(169, 143, 255, 0.36);
+  border-radius: 0 0 82% 0;
+  transform: skewX(-18deg) rotate(-8deg);
+  filter: drop-shadow(0 0 18px rgba(93, 202, 165, 0.28));
+}
+
+.mission-route::after {
+  content: "";
+  position: absolute;
+  right: -0.35rem;
+  top: 30%;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 999px;
+  background: var(--color-cyan);
+  box-shadow: 0 0 24px rgba(93, 202, 165, 0.9), 0 0 54px rgba(169, 143, 255, 0.55);
+}
+
+.ship-flight-glow {
+  position: absolute;
+  left: -8%;
+  bottom: 15%;
+  height: 28%;
+  width: 44%;
+  transform: rotate(10deg);
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, transparent, rgba(93, 202, 165, 0.28), rgba(169, 143, 255, 0.2), transparent),
+    linear-gradient(90deg, transparent, rgba(93, 202, 165, 0.22), transparent);
+  filter: blur(18px);
+}
+
+.ship-flight-glow::before,
+.ship-flight-glow::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(93, 202, 165, 0.65));
+  box-shadow: 0 0 28px rgba(93, 202, 165, 0.55);
+}
+
+.ship-flight-glow::before {
+  top: 35%;
+}
+
+.ship-flight-glow::after {
+  top: 62%;
+  background: linear-gradient(90deg, transparent, rgba(169, 143, 255, 0.48));
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.section-kicker {
+  color: var(--color-cyan);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.thin-rule {
+  background: linear-gradient(90deg, transparent, rgba(93, 202, 165, 0.55), rgba(169, 143, 255, 0.55), transparent);
+}
+
+.mission-slide {
+  isolation: isolate;
+}
+
+.mission-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 0;
+  background:
+    radial-gradient(circle at 72% 45%, rgba(93, 202, 165, 0.08), transparent 34%),
+    radial-gradient(circle at 20% 64%, rgba(169, 143, 255, 0.07), transparent 28%);
+  mask-image: none;
+}
+
+.mission-slide::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  width: min(28rem, calc(100vw - 3rem));
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(93, 202, 165, 0.16), rgba(169, 143, 255, 0.16), transparent);
+}
+
+#hero::after {
+  display: none;
+}
+
+elevenlabs-convai {
+  --elevenlabs-convai-bottom: 1.25rem;
+}
+
+elevenlabs-convai::part(widget),
+elevenlabs-convai::part(trigger) {
+  right: 1.25rem;
+  bottom: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    scroll-snap-type: y proximity;
+  }
+
+  .mission-slide::before,
+  .mission-slide::after {
+    display: none;
+  }
+}
