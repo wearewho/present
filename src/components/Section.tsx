@@ -62,7 +62,7 @@ export function Section({ id, children, className = "", fullBleed = false, bgVid
   const planet = planets[id];
 
   return (
-    <section id={id} className={`mission-slide relative z-10 flex min-h-screen snap-start snap-always items-center overflow-hidden px-5 py-20 md:px-10 ${className}`}>
+    <section id={id} className={`mission-slide relative z-10 flex h-screen snap-start snap-always items-center overflow-hidden px-5 py-16 md:px-10 ${className}`}>
       {id !== "hero" ? (
         <div aria-hidden="true" className="absolute inset-0 -z-20">
           {bgVideo ? (
