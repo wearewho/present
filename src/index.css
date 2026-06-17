@@ -192,3 +192,72 @@ elevenlabs-convai::part(trigger) {
     display: none;
   }
 }
+
+@media (min-width: 768px) {
+  .mission-slide,
+  .mission-slide p,
+  .mission-slide span,
+  .mission-slide li,
+  .mission-slide h1,
+  .mission-slide h2,
+  .mission-slide h3 {
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.72);
+  }
+
+  .mission-slide [class*="text-voyager-mist/2"],
+  .mission-slide [class*="text-voyager-mist/3"],
+  .mission-slide [class*="text-voyager-mist/4"] {
+    color: rgba(216, 227, 255, 0.68) !important;
+  }
+
+  .mission-slide [class*="text-voyager-mist/5"] {
+    color: rgba(216, 227, 255, 0.76) !important;
+  }
+
+  .mission-slide [class*="text-voyager-mist/6"],
+  .mission-slide [class*="text-voyager-mist/7"] {
+    color: rgba(216, 227, 255, 0.84) !important;
+  }
+
+  .mission-slide [class*="text-voyager-mist/8"] {
+    color: rgba(216, 227, 255, 0.92) !important;
+  }
+
+  .mission-slide [class*="text-[8px]"] {
+    font-size: 0.68rem !important;
+  }
+
+  .mission-slide [class*="text-[9px]"] {
+    font-size: 0.72rem !important;
+  }
+
+  .mission-slide [class*="text-[10px]"] {
+    font-size: 0.78rem !important;
+  }
+
+  .mission-slide [class*="text-[11px]"],
+  .mission-slide [class*="text-[11.5px]"] {
+    font-size: 0.82rem !important;
+  }
+
+  .mission-slide [class*="bg-voyager-ink/4"],
+  .mission-slide [class*="bg-voyager-ink/5"] {
+    background-color: rgba(7, 8, 22, 0.72) !important;
+  }
+
+  nav[aria-label="Mission waypoints"] {
+    background-color: rgba(7, 8, 22, 0.74);
+  }
+
+  nav[aria-label="Mission waypoints"] [class*="text-voyager-mist/3"],
+  nav[aria-label="Mission waypoints"] [class*="text-voyager-mist/5"] {
+    color: rgba(216, 227, 255, 0.68) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 820px) {
+  .mission-slide {
+    padding-top: 4.25rem;
+    padding-bottom: 3rem;
+  }
+}
